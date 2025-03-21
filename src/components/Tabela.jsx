@@ -1,12 +1,26 @@
-import { initialDevices, przyciskiKategorii } from './Consts';
-import { Filtry } from './Filtry';
+import { initialDevices } from './Consts';
+import { PrzyciskiKategorii } from './PrzyciskiKategorii';
+import { Filtry, filterDevices } from './Filtry';
 import './Tabela.css'
+import { useState } from 'react';
+
 export const Tabela = () => {
+    const [selectedCategory, setSelectedCategory] = useState("Wszystkie");
+    const [selectedUwiw, setSelectedUwiw] = useState("nastanie");
+    let devices = initialDevices;
     return (
         <div className="tabela-container">
-            <div className='kontener-filtry-boczne'>{przyciskiKategorii}</div>
+            <div className='kontener-filtry-boczne'>
+                <PrzyciskiKategorii
+                    selectedCategory={selectedCategory} 
+                    setSelectedCategory={setSelectedCategory} 
+                /></div>
             <div className="kontener-grida">
-                <div className="szeroki-div-grida"> <Filtry /> </div>
+                <div className="szeroki-div-grida"> 
+                    <Filtry 
+                        selectedCategory={selectedCategory} 
+                        setSelectedCategory={setSelectedCategory} 
+                    /> </div>
                 <div className="uwiw">Ewidencja</div>
                 <div className="sala">Sala</div>
                 <div className="kategoria">Kategoria</div>
@@ -15,7 +29,8 @@ export const Tabela = () => {
                 <div className="data-zakupu">Data zakupu</div>
                 <div className="status">Status</div>
                 <div className="operacje operacje4x">Operacje</div>
-                {initialDevices.map(device => (
+                {/*devices = filterDevices(devices,selectedCategory)*/}
+                {devices.map(device => (
                     <>
                         <div className="uwiw">{device.uwiw}</div>
                         <div className="sala">{device.sala}</div>

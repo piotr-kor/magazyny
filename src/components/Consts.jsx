@@ -68,25 +68,33 @@ export const initialDevices = [
     obudowa: 'szary', data_zakupu:'2020-11-22', status_:'potwierdzony',
   }
 ];
+export const kategorie = [
+  "Wszystkie",
+  "Access Point",
+  "Drukarka",
+  "Ekran Interaktywny",
+  "Głośniki",
+  "Inne",
+  "Kamera Int.",
+  "Komputer",
+  "Ksero",
+  "Laptop",
+  "Monitor",
+  "Projektor",
+  "Router",
+  "Serwer",
+  "Skaner",
+  "Switch",
+  "Tablet",
+  "Tablet Graf."
+];
 
-export const przyciskiKategorii = <>
-   <h3>Filtruj kategorię</h3>
-  <button className="filtr-button">Wszystkie</button>
-  <button className="filtr-button">Access Point</button>
-  <button className="filtr-button">Drukarka</button>
-  <button className="filtr-button">Ekran Interaktywny</button>
-  <button className="filtr-button">Głośniki</button>
-  <button className="filtr-button">Inne</button>
-  <button className="filtr-button">Kamera Int.</button>
-  <button className="filtr-button">Komputer</button>
-  <button className="filtr-button">Ksero</button>
-  <button className="filtr-button">Laptop</button>
-  <button className="filtr-button">Monitor</button>
-  <button className="filtr-button">Projektor</button>
-  <button className="filtr-button">Router</button>
-  <button className="filtr-button">Serwer</button>
-  <button className="filtr-button">Skaner</button>
-  <button className="filtr-button">Switch</button>
-  <button className="filtr-button">Tablet</button>
-  <button className="filtr-button">Tablet Graf.</button>
-</>
+export const uwiwOptions = [
+  { value: "wszystkie", label: "wszystkie" },
+  { value: "nastanie", label: "UWIW - na stanie" },
+  { value: "bezstarych", label: "UWIW - bez starych" },
+  { value: "stary", label: "S_UWIW - stare" },
+  { value: "zzs", label: "ZZS - skasowane" },
+  { value: "tani", label: "TANI - poza ewid." }
+];
+
