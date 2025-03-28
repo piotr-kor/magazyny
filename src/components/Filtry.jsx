@@ -2,6 +2,7 @@ import { useState } from "react";
 import { kategorie, uwiwOptions } from "./Consts";
 
 export const filterDevices = (devices, selectedCategory) => {
+    console.log (selectedCategory);
     return devices.filter(device => 
       (selectedCategory === "Wszystkie" || device.kategoria === selectedCategory) 
     );
@@ -11,12 +12,16 @@ const SelectKategoria = ({ selectedCategory, setSelectedCategory }) => {
     return (
       <div>
         Wybierz kategorię
-        <select className="filtr-select">
+        <select 
+          className="filtr-select" 
+          value={selectedCategory}
+          onChange={(e) => {
+            setSelectedCategory(e.target.value);
+            console.log("test");
+          }}
+          >
           {kategorie.map((category, index) => (
-            <option 
-                key={index} 
-                value={category}
-                onClick={() => setSelectedCategory(category)}>
+            <option key={index} value={category}>
               {category}
             </option>
           ))}

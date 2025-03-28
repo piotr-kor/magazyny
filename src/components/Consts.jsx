@@ -11,7 +11,7 @@ export const initialDevices = [
     procesor: '', ram: '', plyta: '', dysk: '', przekatna: '39"', mac: '', licencje: '', inne: '',
     obudowa: 'czarny', data_zakupu:'2018-07-01', status_:'potwierdzony',
   },
-  { id: 2, uwiw: 'uw/1245', sala: '223', lp_w_sali: '', kategoria: 'laptop', model: 'Dell ws32-43',
+  { id: 2, uwiw: 'uw/1245', sala: '223', lp_w_sali: '', kategoria: 'Laptop', model: 'Dell ws32-43',
     procesor: 'Intel i5-3456', ram: '32GB', plyta: '', dysk: '500GB ssd m2', przekatna: '15"', mac: '', licencje: 'Win 11Pro', inne: '',
     obudowa: 'czarny', data_zakupu:'2020-09-01', status_:'potwierdzony',
   },
